@@ -1,3 +1,4 @@
+package ro.ase.csie.cts.seminar1;
 
 public class Test {
 
