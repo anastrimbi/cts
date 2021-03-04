@@ -11,7 +11,8 @@ public class Main {
 		System.out.println(cu.weekDay2(3));
 		// vector
 		System.out.println(cu.weekDay3(3));
-		
+		// validation working?
+		System.out.println(cu.weekDay3(10));
 	}
 
 }
