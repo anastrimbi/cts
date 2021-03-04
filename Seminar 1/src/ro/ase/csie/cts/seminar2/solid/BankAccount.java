@@ -13,13 +13,15 @@ public class BankAccount {
 		balance = 0;
 	}
 	
-	public void withdraw(long amount) {
+	public void withdraw(long amount) throws InsufficientFundsException {
+		if(amount > balance)
+			throw new InsufficientFundsException("Insufficient funds! You have "+ balance);
 		System.out.println("withdrawing " + amount + " from" + iban);
 		balance -= amount;
 	}
 	
 	public void deposit(long amount) {
-		System.out.println("adding " + amount + " from" + iban);
+		System.out.println("adding " + amount + " to your account " + iban);
 		balance += amount;
 	}
 
