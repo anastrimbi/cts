@@ -40,5 +40,11 @@ public class CalendarUtil {
 				return null;
 		}
 	}
+	
+	 
+	public String weekDay3(int day){
+        String[] weekDays = {"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
+        return weekDays[day-1];
+    }
 }
 
