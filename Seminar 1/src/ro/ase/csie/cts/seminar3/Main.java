@@ -7,7 +7,7 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		Map<Person, Account> employees = new HashMap<>();
+		Map<Person, Receivable> employees = new HashMap<>();
 		
 		Person p1 = new Person("Ana Norris");
 		CreditBankAccount b1 = new CreditBankAccount("RF12345678", p1, -500);
@@ -22,11 +22,16 @@ public class Main {
 		employees.put(p2,b2);
 		employees.put(p3,b3);
 		
-		for(Account a : employees.values()) {
+		for(Receivable a : employees.values()) {
 			a.deposit(1000);
 		}
 		
-		for(Account a : employees.values()) {
+		Map<Person, Payable> union = new HashMap<>();
+		
+		union.put(p2,  b2);
+		union.put(p3, b3);
+		
+		for(Payable a : union.values()) {
 			try {
 				a.withdraw(10);
 			} catch (InsufficientFundsException ex) {
