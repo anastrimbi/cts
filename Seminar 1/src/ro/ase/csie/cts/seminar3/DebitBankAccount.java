@@ -12,13 +12,13 @@ public class DebitBankAccount extends BankAccount implements Payable, Receivable
         if(amount > balance){
             throw new InsufficientFundsException("Insufficient Funds");
         }
-        System.out.println("Withdrawing " + amount + " from " + iban);
+        notificationService.sendNotification(accountHolder, "Withdrawing " + amount + " from " + iban);
         balance -= amount;
     }
 
     @Override
     public void deposit(long amount){
-        System.out.println("Adding " + amount + " to " + iban);
+    	notificationService.sendNotification(accountHolder, "Adding " + amount + "to " + iban);
         balance += amount;
     }
 

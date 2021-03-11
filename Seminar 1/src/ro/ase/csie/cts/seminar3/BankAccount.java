@@ -4,6 +4,8 @@ public abstract class BankAccount {
     protected String iban;
     protected long balance;
     protected Person accountHolder;
+    
+    protected NotificationService notificationService;
 
     public String getIban() {
         return iban;

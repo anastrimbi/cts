@@ -10,7 +10,7 @@ public class CreditBankAccount extends BankAccount implements Receivable{
 
     @Override
     public void deposit(long amount) {
+    	notificationService.sendNotification(accountHolder, "Adding " + amount + "to " + iban);
         this.balance += amount;
-        System.out.println("Adding " + amount + "to " + iban);
     }
 }
