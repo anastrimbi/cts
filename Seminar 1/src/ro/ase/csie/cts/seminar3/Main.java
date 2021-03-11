@@ -7,16 +7,16 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		Map<Person, BankAccount> employees = new HashMap<>();
+		Map<Person, Account> employees = new HashMap<>();
 		
 		Person p1 = new Person("Ana Norris");
-		BankAccount b1 = new BankAccount("RF12345678", p1);
+		CreditBankAccount b1 = new CreditBankAccount("RF12345678", p1, -500);
 		
 		Person p2 = new Person("Archie Norris");
-		BankAccount b2 = new FeeBankAccount("BRD1234567", p2);
+		DebitBankAccount b2 = new FeeBankAccount("BRD1234567", p2);
 		
 		Person p3 = new Person("Yogi");
-		BankAccount b3 = new BankAccount("BEAR234567", p3);
+		DebitBankAccount b3 = new DebitBankAccount("BEAR234567", p3);
 		
 		employees.put(p1,b1);
 		employees.put(p2,b2);
