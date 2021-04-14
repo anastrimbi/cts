@@ -15,4 +15,7 @@ public abstract class ACMECaracterJoc {
 	public abstract void esteLovit(int puncte);
 	public abstract void seVindeca(int puncte);
 	
+	//
+	
+	
 }
