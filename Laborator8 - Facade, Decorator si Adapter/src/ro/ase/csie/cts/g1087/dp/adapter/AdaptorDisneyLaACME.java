@@ -17,7 +17,7 @@ public class AdaptorDisneyLaACME extends ACMECaracterJoc {
 
 	@Override
 	public void esteLovit(int puncte) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
