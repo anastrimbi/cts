@@ -39,7 +39,7 @@ public class Student {
 	}
 
 	public void setVarsta(int varsta) throws ExceptieVarsta {
-		if(varsta < Student.MIN_VARSTA || varsta >= Student.MAX_VARSTA) {
+		if (varsta < Student.MIN_VARSTA || varsta >= Student.MAX_VARSTA) {
 			throw new ExceptieVarsta();
 		}
 		this.varsta = varsta;
@@ -67,7 +67,10 @@ public class Student {
 	}
 
 	public int getNotaMinima() {
-		int min = 0;
+		if (this.note == null || this.note.size() == 0) {
+			return 0;
+		}
+		int min = this.note.get(0);
 		for (int nota : this.note) {
 			if (min > nota) {
 				min = nota;
@@ -75,5 +78,4 @@ public class Student {
 		}
 		return min;
 	}
-
 }
